@@ -1,5 +1,7 @@
-<div>
-    <img [src]="pegaImagemPokemon()" /> <br />
-    <b>{{ pokemon }}</b> 
-    
+<div class="card shadow-sm h-100"> <img [src]="pegaImagemPokemon()" class="card-img-top p-3" [alt]="pokemon">
+  
+  <div class="card-body text-center">
+    <h5 class="card-title text-capitalize">{{ pokemon }}</h5>
+  </div>
+
 </div>

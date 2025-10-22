@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './pokemons.component.scss'
 })
 export class PokemonsComponent {
- pokemons = ['bulbasaur', 'ivysaur']; 
+ pokemons = ['bulbasaur', 'ivysaur', 'Venosaur']; 
 }

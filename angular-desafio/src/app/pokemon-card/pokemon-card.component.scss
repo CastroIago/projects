@@ -1,0 +1,13 @@
+// O :host é a forma do Angular de estilizar o próprio componente
+:host {
+  cursor: pointer; // Mostra uma "mãozinha" ao passar o mouse
+}
+
+.card {
+  transition: all 0.2s ease-in-out; // Efeito suave
+
+  &:hover {
+    transform: scale(1.02); // Aumenta um pouco o card
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important; // Aumenta a sombra
+  }
+}
