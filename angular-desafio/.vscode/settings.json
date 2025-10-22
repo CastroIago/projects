@@ -1,0 +1,5 @@
+{
+    "angularSchematics.style": "scss",
+    "angularSchematics.inlineStyle": false,
+    "angularSchematics.inlineTemplate": false
+}
