@@ -22,7 +22,7 @@ export class PokemonService {
 
   // PokéAPI
   private apiUrl = 'https://pokeapi.co/api/v2/pokemon';
-
+  private typeApiUrl = 'https://pokeapi.co/api/v2/type';
   // construtor 
   constructor(private http: HttpClient) { }
 
@@ -36,5 +36,9 @@ export class PokemonService {
     
    
     return this.http.get<any>(`${this.apiUrl}/${name}`);
+  }
+  // terceira chamada api (tipos)
+  getTypeList(){
+    return this.http.get<PokemonListResponse>(this.typeApiUrl)
   }
 }
