@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { PokemonCardComponent } from '../pokemon-card/pokemon-card.component'; 
 
 import { PokemonService, PokemonItem } from '../services/pokemon.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pokemons',
   standalone: true,
   imports: [
     CommonModule, 
-    PokemonCardComponent
+    PokemonCardComponent,
+    RouterLink
   ],
   templateUrl: './pokemons.component.html',
   styleUrl: './pokemons.component.scss'

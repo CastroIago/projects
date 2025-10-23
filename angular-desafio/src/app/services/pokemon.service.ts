@@ -21,7 +21,7 @@ export interface PokemonListResponse {
 export class PokemonService {
 
   // PokéAPI
-  private apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=200';
+  private apiUrl = 'https://pokeapi.co/api/v2/pokemon';
 
   // construtor 
   constructor(private http: HttpClient) { }
@@ -29,7 +29,12 @@ export class PokemonService {
  // Traz a lista API
   getPokemons(): Observable<PokemonListResponse> {
     
+    return this.http.get<PokemonListResponse>(`${this.apiUrl}?limit=200`);
+  }
+// Traz a segunda chamada API (detalhes)
+  getPokemonDetail(name: string): Observable<any> {
     
-    return this.http.get<PokemonListResponse>(this.apiUrl);
+   
+    return this.http.get<any>(`${this.apiUrl}/${name}`);
   }
 }
