@@ -2,12 +2,24 @@
 :host {
   cursor: pointer; // Mostra uma "mãozinha" ao passar o mouse
 }
-
 .card {
   transition: all 0.2s ease-in-out; // Efeito suave
 
+  // Deixamos a borda de cima mais grossa e definimos a cor azul
+  border-top-width: 4px;
+  border-top-color: #0d6efd; 
+  // fizemos o mesmo agora com a borda de baixo
+  border-bottom-width: 4px;
+  border-bottom-color: #0d6efd ;
+  // Fundo da moldura
+  background-color: #d5d5d5;
+  // O '&' -> recurso para o alinhamento
   &:hover {
     transform: scale(1.02); // Aumenta um pouco o card
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important; // Aumenta a sombra
+    
+  
+    // Nós sobrescrevemos a cor da borda (de todas elas)
+    border-color: #0080ff; 
   }
 }

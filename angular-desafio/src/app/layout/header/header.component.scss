@@ -1,0 +1,4 @@
+// forçar o estilo em cima do bootstrap (manter uma paleta de cores)
+:host ::ng-deep .navbar {
+  background-color: #d5d5d5;
+}
